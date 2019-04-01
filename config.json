@@ -1,0 +1,7 @@
+{
+    "authToken": "",
+    "prefix": ">",
+    "voiceActivityReward": 2,
+    "textActivityReward": 1,
+    "tier2roleCost": 250
+}
