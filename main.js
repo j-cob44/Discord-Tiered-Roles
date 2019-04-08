@@ -53,7 +53,7 @@ client.on('message', message => {
                 command.train(originMessage, originUser);
             break;
             case 'investxp':
-                command.investXP(originMessage, originUser, originMember);
+                command.investXP(originMessage, originUser, originMember, client);
             break;
             case 'tier3':
                 command.tier3(originChannel, originUser);
@@ -62,7 +62,7 @@ client.on('message', message => {
                 command.jarlxp(originChannel, originUser);
             break;
             case 'jarldom':
-                command.jarldom(originMessage, originUser, originMember);
+                command.jarldom(originMessage, originUser, originMember, client);
             break;
 
         }

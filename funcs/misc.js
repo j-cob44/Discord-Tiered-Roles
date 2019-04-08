@@ -1,3 +1,5 @@
+var guildID = '503706496740229152';
+
 function msToTime(duration) {
     var seconds = parseInt((duration / 1000) % 60);
     var minutes = parseInt((duration / (1000 * 60)) % 60);
@@ -8,9 +10,9 @@ function msToTime(duration) {
     return minutes + ":" + seconds;
 }
 
-function findGuildMemberByID(userID){
+function findGuildMemberByID(botClient, userID){
 	guildMember = null;
-	guilds = client.guilds.array();
+	guilds = botClient.guilds.array();
 
 	for(g = 0; g < guilds.length; g++){
 		if(guilds[g].id == guildID){

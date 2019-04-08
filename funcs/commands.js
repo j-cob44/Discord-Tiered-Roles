@@ -103,7 +103,7 @@ function train(message, user){
 
 }
 
-function investXP(message, user, member){
+function investXP(message, user, member, botClient){
     userObj = userFuncs.userRetrieve(user.id);
 
     // levelUp tier 1 role to tier 2
@@ -128,7 +128,7 @@ function investXP(message, user, member){
 
         if(userObj.xp >= investmentNeeded && roleObj.userid != userObj.id){
             if(roleObj.userid != null){
-                userRoles.demoteUser(roleObj.demotionRole, roleObj.userid);
+                userRoles.demoteUser(roleObj.demotionId, roleObj.userid, botClient);
             }
 
             userRoles.addRole(roleObj.id, member, message);
@@ -198,7 +198,7 @@ function jarlxp(channel, user){
     channel.send('Currently, ' + (xpList[5]) + "XP is needed to claim the Jarl's throne.");
 }
 
-async function jarldom(message, user, member){
+async function jarldom(message, user, member, botClient){
     userObj = userFuncs.userRetrieve(user.id);
 
     if(roleID.confirmTier3Role(member) || member.highestRole.id == roleID.jarlID){
@@ -208,7 +208,7 @@ async function jarldom(message, user, member){
         
         if(userObj.xp >= investmentNeeded && roleObj.userid != userObj.id){
             if(roleObj.userid != null){
-                userRoles.demoteUser(roleObj.demotionRole, roleObj.userid);
+                userRoles.demoteUser(roleObj.demotionId, roleObj.userid, botClient);
             }
 
             userRoles.addRole(roleObj.id, member, message);
