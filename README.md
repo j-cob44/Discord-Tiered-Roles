@@ -1,6 +1,8 @@
-# Discord-Tiered-Roles
+# Discord Viking Bot Training Game
 
-Tiered roles within a discord server. Currently features 4 tiers with the 2 highest tiers only allowing one person per role. The final tier, tier 4, is the highest role in the server.
+Fight and train to be the best viking in the discord server. Using tiered roles and the Discord API, a bot manages who is the best in the server and will give users the chance to battle to be the best.
+
+Currently features 4 tiers with the 2 highest tiers only allowing one person per role. The final tier, tier 4, is the highest role in the server.
 
 1.0.0 ----------------------------------------
 
